@@ -31,7 +31,11 @@ export const getSupabaseClient = () => {
   }
 
   if (!browserClient) {
-    browserClient = createClient(env.supabaseUrl, env.supabaseAnonKey);
+    try {
+      browserClient = createClient(env.supabaseUrl, env.supabaseAnonKey);
+    } catch {
+      return null;
+    }
   }
 
   return browserClient;
