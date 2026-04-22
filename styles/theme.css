@@ -1,0 +1,17 @@
+:root {
+  --background: #fffdf7;
+  --foreground: #1f2937;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --surface-muted: #fffaf0;
+  --surface-strong: #f0fdfa;
+  --border: rgba(15, 118, 110, 0.12);
+  --brand: #14b8a6;
+  --brand-dark: #0f766e;
+  --brand-soft: rgba(20, 184, 166, 0.1);
+  --accent: #fb923c;
+  --accent-soft: rgba(251, 146, 60, 0.14);
+  --success: #16a34a;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
