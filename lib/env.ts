@@ -1,4 +1,6 @@
 const getEnv = (key: string) => process.env[key] ?? "";
+const fallbackSupabaseUrl = "https://vebyrturqidibzfetulx.supabase.co";
+const fallbackSupabasePublishableKey = "sb_publishable_2Ewh6lO875wvJuzl7tc0Pg_zBL9_kcs";
 const isValidHttpUrl = (value: string) => {
   try {
     const candidate = new URL(value);
@@ -16,8 +18,8 @@ const rawSupabaseKey =
   getEnv("SUPABASE_PUBLISHABLE_KEY");
 
 export const env = {
-  supabaseUrl: isValidHttpUrl(rawSupabaseUrl) ? rawSupabaseUrl : "",
-  supabaseAnonKey: rawSupabaseKey
+  supabaseUrl: isValidHttpUrl(rawSupabaseUrl) ? rawSupabaseUrl : fallbackSupabaseUrl,
+  supabaseAnonKey: rawSupabaseKey || fallbackSupabasePublishableKey
 };
 
 export const isSupabaseConfigured =
